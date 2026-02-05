@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>WebXR Furniture Placer - Enhanced</title>
+        <meta
+            name="description"
+            content="Place furniture in your space using WebXR with real-time lighting"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪑</text></svg>"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="modern-bg">
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Place Furniture in Your Space Instantly
+                </h1>
+                <p class="hero-description">
+                    Experience next-gen WebXR with real-time environment
+                    lighting, hit testing, and realistic shadows.
+                </p>
+                <button id="startAR" class="btn btn--primary btn--large">
+                    <span>Enter AR</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Community Remix Suggestion -->
+        <section class="remix-suggestion">
+            <p>
+                Want inspiration?
+                <a href="#" class="remix-link"
+                    >Try a trending community style →</a
+                >
+            </p>
+        </section>
+
+        <!-- AR Container -->
+        <div id="arContainer" class="hidden"></div>
+
+        <!-- AR Interface Overlay -->
+        <div id="arInterface" class="ar-interface hidden">
+            <!-- Instructions -->
+            <div id="instructions" class="instructions glass">
+                <p id="instructionText">Move your device to find surfaces</p>
+            </div>
+
+            <!-- Horizontally Scrollable Furniture Selection -->
+            <div id="furniturePanel" class="furniture-panel-horizontal hidden">
+                <div class="furniture-scroll">
+                    <div class="furniture-card-mini" data-type="chair">
+                        <div class="mini-preview">
+                            <span class="furniture-icon">🪑</span>
+                        </div>
+                        <span class="furniture-label">Chair</span>
+                    </div>
+                    <div class="furniture-card-mini" data-type="sofa">
+                        <div class="mini-preview">
+                            <span class="furniture-icon">🛋️</span>
+                        </div>
+                        <span class="furniture-label">Sofa</span>
+                    </div>
+                    <div class="furniture-card-mini" data-type="table">
+                        <div class="mini-preview">
+                            <span class="furniture-icon">🍽️</span>
+                        </div>
+                        <span class="furniture-label">Table</span>
+                    </div>
+                    <div class="furniture-card-mini" data-type="bookshelf">
+                        <div class="mini-preview">
+                            <span class="furniture-icon">📚</span>
+                        </div>
+                        <span class="furniture-label">Bookshelf</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exit Button -->
+            <button id="exitAR" class="btn btn--secondary exit-btn">
+                Stop AR
+            </button>
+
+            <!-- Delete Button -->
+            <button id="deleteBtn" class="btn btn--danger delete-btn">
+                Delete
+            </button>
+        </div>
+
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+                }
+            }
+        </script>
+        <script type="module" src="app.js"></script>
+    </body>
+</html>

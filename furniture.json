@@ -1,0 +1,20 @@
+{
+  "chair": {
+    "id": "chair",
+    "name": "Modern Chair",
+    "model_url": "assets/chair.glb",
+    "scale": "0.5 0.5 0.5"
+  },
+  "sofa": {
+    "id": "sofa",
+    "name": "Comfortable Sofa",
+    "model_url": "assets/sofa1.glb",
+    "scale": "0.7 0.4 0.3"
+  },
+  "table": {
+    "id": "table",
+    "name": "Coffee Table",
+    "model_url": "assets/table.glb",
+    "scale": "0.6 0.3 0.6"
+  }
+}
